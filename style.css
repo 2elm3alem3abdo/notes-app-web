@@ -1,7 +1,6 @@
 html{
     background-color: rgb(215, 215, 180);
     scroll-behavior: smooth;
-    scale: 80%;
 }
 h1{
     text-align: center;
@@ -60,7 +59,7 @@ div[id="container"]{
     background-color: lightgoldenrodyellow;
     margin: auto;
     margin-top: 20px;
-    max-height: 400px;
+    max-height: 500px;
     overflow-y: auto;
 }
 div[id="nadd"]{
@@ -161,12 +160,4 @@ div[id="container"]::-webkit-scrollbar-thumb {
 div[id="container"]::-webkit-scrollbar-thumb:hover{
     transition: transform 0.1s ease-in;
     background-color: darkblue;
-}
-
-@media (max-width: 600px) {
-  html {
-    transform: scale(1);
-    transform-origin: top left;
-    width: 125%; /* compensate for scaling to keep layout full width */
-  }
 }
