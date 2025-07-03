@@ -1,5 +1,6 @@
 html{
-    background-color: lightgreen;
+    background-color: rgb(215, 215, 180);
+    scroll-behavior: smooth;
 }
 h1{
     text-align: center;
@@ -10,7 +11,7 @@ h3{
 }
 div[id="h1"]{
     color: white;
-    width: 50%;
+    width: 90%;
     margin: auto;
     border: solid;
     border-color: black;
@@ -24,7 +25,7 @@ div[id="h1"]{
 }
 div[id="main"]{
     background-color: lightgoldenrodyellow;
-    width: 90%;
+    width: 50%;
     max-width: 500px;
     height: 90px;
     border-radius: 100px;
@@ -50,7 +51,7 @@ input[id="c"]{
 }
 div[id="container"]{
     display: flex;
-    width: 90%;
+    width: 75%;
     max-width: 750px;
     flex-wrap: wrap;
     padding: 25px;
@@ -58,7 +59,7 @@ div[id="container"]{
     background-color: lightgoldenrodyellow;
     margin: auto;
     margin-top: 20px;
-    max-height: 450px;
+    max-height: 400px;
     overflow-y: auto;
 }
 div[id="nadd"]{
