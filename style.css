@@ -165,7 +165,7 @@ div[id="container"]::-webkit-scrollbar-thumb:hover{
 
 @media (max-width: 600px) {
   html {
-    transform: scale(0.9);
+    transform: scale(1);
     transform-origin: top left;
     width: 125%; /* compensate for scaling to keep layout full width */
   }
