@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Your Notes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="h1">Notes Web</div>
+    <div id="main">
+        <input type="text" id="t" placeholder="Title">
+        <input type="text" id="c" placeholder="Description">
+        <div id="a" style="color: white;">
+            <button id="add">Add Note</button>
+        </div>     
+    </div>
+    <div id="container">
+        <div id="nadd">
+            <h1 style="color: black; text-align: center;">Notes Added:<br></h1>
+        </div>
+    </div>
+    <script>
+        const addbutton = document.getElementById("add");
+        addbutton.addEventListener("click", NoteAddition);
+        function NoteAddition(){
+            const t = document.getElementById("t");
+            const c = document.getElementById("c");
+    
+            const title = t.value;
+            const content = c.value;
+
+            if(title === "" || content ===""){
+                alert("Empty fields found, both Title and Description are required.");
+                return;
+            }
+
+            const notediv = document.createElement("div");
+            notediv.classList.add("note");
+
+            const bdiv = document.createElement("div");
+            bdiv.id = "bn";
+
+            const h1div = document.createElement("h1");
+            h1div.textContent = title;
+            h1div.id = "h1d";
+
+            const h3div = document.createElement("h3");
+            h3div.textContent = content;
+            h3div.id = "h3d";
+            
+            const bnote = document.createElement("button");
+            bnote.textContent = "Delete";
+            bnote.id = "delete"
+            bnote.addEventListener("click", function del(){
+                notediv.classList.add("fade-out");
+                setTimeout(() => {
+                    notediv.remove();
+                }, 200);
+            })
+
+            bdiv.appendChild(bnote);
+            notediv.appendChild(h1div);
+            notediv.appendChild(h3div);
+            notediv.appendChild(bdiv);
+
+            document.getElementById("container").appendChild(notediv);
+            
+            const container = document.getElementById("container");
+            container.scrollTop = container.scrollHeight;
+        }
+    </script>
+</body>
+</html>

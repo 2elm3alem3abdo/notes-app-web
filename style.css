@@ -1,0 +1,160 @@
+html{
+    background-color: lightgreen;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+h3{
+    color: white;
+}
+div[id="h1"]{
+    color: white;
+    width: 50%;
+    margin: auto;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 30px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    text-align: center;
+    background-color: blue;
+    padding: 2px;
+}
+div[id="main"]{
+    background-color: lightgoldenrodyellow;
+    width: 500px;
+    height: 90px;
+    border-radius: 100px;
+    margin: auto;
+    padding: 20px;
+}
+input[id="t"]{
+    border: solid  blue;
+    border-width: 2px;
+    border-radius: 50px;
+    margin-left: 10%;
+    text-align: left;
+    width: 80%;
+}
+input[id="c"]{
+    border: solid  blue;
+    border-width: 2px;
+    border-radius: 50px;
+    margin-left: 10%;
+    text-align: left;
+    width: 80%;
+    margin-top: 2%;
+}
+div[id="container"]{
+    display: flex;
+    max-width: 750px;
+    flex-wrap: wrap;
+    padding: 25px;
+    gap: 20px;
+    background-color: lightgoldenrodyellow;
+    margin: auto;
+    margin-top: 20px;
+    height: 450px;
+    overflow-y: auto;
+}
+div[id="nadd"]{
+    margin: auto;
+    margin-top: 0px;
+    width: 100%;
+}
+
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.note{
+    background-color: Blue;
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 100px;
+    padding: 10px;
+    animation: fadeIn 0.2s ease-in;
+}
+
+
+div[id="bn"]{
+    display: flex;
+    justify-content: center;
+}
+button[id="add"]{
+    color: white;
+    width: 50%;
+    margin: 25%;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 30px;
+    margin-top: 2%;
+    text-align: center;
+    background-color: blue;
+}
+button[id="delete"]{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 5px;
+}
+.note.fade-out{
+    animation: fadeOut 0.2s ease-out forwards;
+}
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+button[id="add"]:hover{
+    transition: transform 0.05s ease-in, background-color 0.25s ease-in;
+    transform: scale(1.1);
+    background-color: darkblue;
+}
+button[id="delete"]:hover{
+    transition: transform 0.05s ease-in, background-color 0.25s ease-in;
+    transform: scale(1.1);
+    background-color: darkred;
+}
+.note:hover{
+    transition: transform 0.1s ease-in;
+    transform: scaleX(1.15);
+}
+input[id="t"]:hover{
+    transition: background-color 0.1s ease-in;
+    background-color: rgb(225, 225, 225);
+}
+input[id="c"]:hover{
+    transition: background-color 0.1s ease-in;
+    background-color: rgb(225, 225, 225);
+}
+div[id="container"]::-webkit-scrollbar {
+    width: 10px;              /* Adjust width of the vertical scrollbar */
+
+}
+
+div[id="container"]::-webkit-scrollbar-track {
+    background: white;      /* Light track background */
+}
+div[id="container"]::-webkit-scrollbar-thumb {
+    background: blue;
+}
+div[id="container"]::-webkit-scrollbar-thumb:hover{
+    transition: transform 0.1s ease-in;
+    background-color: darkblue;
+}
