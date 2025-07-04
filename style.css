@@ -140,10 +140,10 @@ button[id="delete"]{
 button[id="download"]{
     background-color: lightblue;
     color: black;
-    width: 40%;
+    width: fit-content;
     border: 1px solid black;
     border-radius: 100px;
-    font-size: x-large;
+    font-size: larger;
     padding-bottom: 1%;
     padding-top: 1%;
     box-sizing: border-box;
