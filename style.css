@@ -72,7 +72,7 @@ div[id="container"]{
     background-color: lightgoldenrodyellow;
     margin: auto;
     margin-top: 20px;
-    max-height: 50vh;
+    max-height: 40vh;
     overflow-y: auto;
     padding: 10px;
 }
@@ -137,6 +137,20 @@ button[id="delete"]{
     font-family: 'Patrick Hand', sans-serif;
     font-weight: bold;
 }
+button[id="download"]{
+    background-color: lightblue;
+    color: black;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 100px;
+    font-size: x-large;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', sans-serif;
+    font-weight: bold;
+    margin: auto;
+}
 .note.fade-out{
     animation: fadeOut 0.2s ease-out forwards;
 }
@@ -155,6 +169,11 @@ button[id="delete"]:hover{
     transition: transform 0.05s ease-in, background-color 0.1s ease-in;
     transform: scale(1.1);
     background-color: salmon;
+}
+button[id="download"]:hover{
+    transition: transform 0.05s ease-in, background-color 0.1s ease-in;
+    transform: scale(1.1);
+    background-color: rgb(73, 116, 130);
 }
 .note:hover{
     transition: transform 0.1s ease-in;
