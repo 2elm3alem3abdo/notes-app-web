@@ -16,9 +16,6 @@
         <div id="a" style="color: white;">
             <button id="add">Add Note</button>
         </div>
-        <div style="text-align: center; margin-top: 20px;">
-            <button id="download">Download Notes</button>
-        </div>     
     </div>
     <div id="container">
         <div id="nadd">
@@ -36,8 +33,17 @@
             const title = t.value;
             const content = c.value;
 
+            const ewarn = document.getElementById("warn");
+            if(ewarn){
+                ewarn.remove();
+            }
+
             if(title === "" || content ===""){
-                alert("Empty fields found, both Title and Description are required.");
+                const warning = document.createElement("h1");
+                warning.id = "warn";
+                warning.textContent = "Empty fields found, both Title and Description are required";
+                document.getElementById("main");
+                main.appendChild(warning);
                 return;
             }
 
@@ -74,39 +80,6 @@
             
             const container = document.getElementById("container");
             container.scrollTop = container.scrollHeight;
-        }
-
-
-
-
-
-
-        const downloadBtn = document.getElementById("download");
-        downloadBtn.addEventListener("click", downloadNotes);
-
-        function downloadNotes() {
-            const notes = document.querySelectorAll(".note");
-            if (notes.length === 0) {
-                alert("No notes to download.");
-                return;
-            }
-
-            let content = "";
-            notes.forEach((note, index) => {
-                const title = note.querySelector("#h1d")?.textContent || "";
-                const description = note.querySelector("#h3d")?.textContent || "";
-                content += `Note ${index + 1}:\nTitle: ${title}\nDescription: ${description}\n\n`;
-            });
-
-            const blob = new Blob([content], { type: "text/plain" });
-            const url = URL.createObjectURL(blob);
-
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = "my_notes.txt";
-            link.click();
-
-            URL.revokeObjectURL(url);
         }
     </script>
 </body>

@@ -7,6 +7,11 @@ h1{
     text-align: center;
     color: black;
 }
+h1[id="warn"]{
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
 h3{
     color: black;
 }
@@ -112,6 +117,11 @@ div[id="a"]{
     display: flex;
     justify-content: center;
 }
+div[id="warn"]{
+    text-align: center;
+    margin: auto;
+    font-size: xx-large;
+}
 button[id="add"]{
     background-color: lightblue;
     color: black;
@@ -137,20 +147,6 @@ button[id="delete"]{
     font-family: 'Patrick Hand', sans-serif;
     font-weight: bold;
 }
-button[id="download"]{
-    background-color: lightblue;
-    color: black;
-    width: fit-content;
-    border: 1px solid black;
-    border-radius: 100px;
-    font-size: larger;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    box-sizing: border-box;
-    font-family: 'Patrick Hand', sans-serif;
-    font-weight: bold;
-    margin: auto;
-}
 .note.fade-out{
     animation: fadeOut 0.2s ease-out forwards;
 }
@@ -169,11 +165,6 @@ button[id="delete"]:hover{
     transition: transform 0.05s ease-in, background-color 0.1s ease-in;
     transform: scale(1.1);
     background-color: salmon;
-}
-button[id="download"]:hover{
-    transition: transform 0.05s ease-in, background-color 0.1s ease-in;
-    transform: scale(1.1);
-    background-color: rgb(73, 116, 130);
 }
 .note:hover{
     transition: transform 0.1s ease-in;
