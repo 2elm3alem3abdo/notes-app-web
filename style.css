@@ -99,6 +99,9 @@ div[id="nadd"]{
     }
 }
 .note{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: lightblue;
     border: 1px solid black;
     width: fit-content;
